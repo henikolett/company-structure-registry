@@ -83,8 +83,8 @@
             <div class="links">
                 <a href="/types">All types</a>
                 <a href="/types/create">New type</a>
-                <a href="https://laravel-news.com">News</a>
-                <a href="https://forge.laravel.com">Forge</a>
+                <a href="/elements">All elements</a>
+                <a href="/elements/create">New element</a>
                 <a href="https://github.com/laravel/laravel">GitHub</a>
             </div>
 
