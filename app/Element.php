@@ -10,4 +10,8 @@ class Element extends Model {
         'name', 'parent_id', 'type_id'
     ];
 
+    public function employees(){
+        return $this->belongsToMany('App\Employee');
+    }
+
 }

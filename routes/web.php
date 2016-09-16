@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::resource('/types', 'TypesController');
 
 Route::resource('/elements', 'ElementsController');
+
+Route::resource('/employees', 'EmployeesController');

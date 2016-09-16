@@ -85,7 +85,8 @@
                 <a href="/types/create">New type</a>
                 <a href="/elements">All elements</a>
                 <a href="/elements/create">New element</a>
-                <a href="https://github.com/laravel/laravel">GitHub</a>
+                <a href="/employees">All employees</a>
+                <a href="/employees/create">New employee</a>
             </div>
 
         </div>
