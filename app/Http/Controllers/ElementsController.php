@@ -54,7 +54,9 @@ class ElementsController extends Controller
     public function show($id)
     {
         $element = Element::findOrFail($id);
-        return view('elements.show', compact('element'));
+        $type = $element->type;
+        $employees = $element->employees;
+        return view('elements.show', compact('element', 'type', 'employees'));
     }
 
     /**

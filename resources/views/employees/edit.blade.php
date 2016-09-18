@@ -4,49 +4,61 @@
 
     <h1>Edit employee: {{ $employee->name }}</h1>
 
-    <form action="/employees/{{ $employee->id }}" method="post">
+        <form action="/employees/{{ $employee->id }}" method="post">
 
-        <input type="hidden" name="_method" value="PUT">
+                <input type="hidden" name="_method" value="PUT">
 
-        {{csrf_field()}}
+                {{csrf_field()}}
 
-        <label for="name">Name</label>
-        <input type="text" name="name" value="{{ $employee->name }}">
+                <div class="input-field">
+                    <input type="text" name="name" value="{{ $employee->name }}">
+                    <label for="name" class="active">Name</label>
+                </div>
 
-        <label for="element_id">Add element</label>
-        <select name="element_id" id="element_id">
+                <div class="input-field">
+                    <select name="element_id" id="element_id">
 
-            <option value="0">None</option>
+                        <option value="0">None</option>
 
-            @foreach($elements as $element)
+                        @foreach($elements as $element)
 
-                <option value="{{ $element->id }}">{{ $element->name }}</option>
+                            <option value="{{ $element->id }}">{{ $element->name }}</option>
 
-            @endforeach
+                        @endforeach
 
-        </select>
+                    </select>
+                    <label for="element_id" class="active">Add element</label>
+                </div>
 
-        <h3>Working at:</h3>
-        <ul>
-            @foreach($employee_elements as $employee_element)
+                <br>
 
-                <li> {{ $employee_element->name }} </li>
+                <div>Working at:</div>
+                <ul class="collection">
+                    @foreach($employee_elements as $employee_element)
 
-                @endforeach
-        </ul>
+                        <li class="collection-item"> {{ $employee_element->name }} </li>
 
-        <input type="submit" name="submit" value="Update">
+                    @endforeach
+                </ul>
 
-    </form>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Edit
+                    <i class="material-icons right">send</i>
+                </button>
 
-    <form action="/employees/{{ $employee->id }}" method="post">
 
-        <input type="hidden" name="_method" value="DELETE">
+        </form>
 
-        {{csrf_field()}}
+        <br>
 
-        <input type="submit" name="delete" value="Delete">
+        <form action="/employees/{{ $employee->id }}" method="post">
 
-    </form>
+            <input type="hidden" name="_method" value="DELETE">
+
+            {{csrf_field()}}
+
+            <button class="btn waves-effect waves-light" type="submit" name="action">Delete
+            </button>
+
+        </form>
 
 @endsection

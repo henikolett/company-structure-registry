@@ -12,9 +12,13 @@
         <input type="text" name="name" value="{{ $type->name }}">
         {{csrf_field()}}
 
-        <input type="submit" name="submit" value="Submit">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Edit
+            <i class="material-icons right">send</i>
+        </button>
 
     </form>
+
+    <br>
 
     <form action="/types/{{ $type->id }}" method="post">
 
@@ -22,7 +26,7 @@
 
         {{csrf_field()}}
 
-        <input type="submit" name="submit" value="Delete">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Delete</button>
 
     </form>
 

@@ -10,7 +10,9 @@
         <input type="text" name="name" placeholder="Enter name">
         {{csrf_field()}}
 
-        <input type="submit" name="submit" value="Submit">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Create
+            <i class="material-icons right">send</i>
+        </button>
 
     </form>
 

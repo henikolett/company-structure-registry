@@ -4,11 +4,11 @@
 
     <h1>All elements</h1>
 
-    <ul>
+    <ul class="collection">
 
         @foreach($elements as $element)
 
-            <li><a href="{{ route('elements.show', $element->id) }}">{{ $element->name }}</a></li>
+            <li class="collection-item"><a href="{{ route('elements.show', $element->id) }}">{{ $element->name }}</a></li>
 
         @endforeach
 

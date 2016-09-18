@@ -2,8 +2,8 @@
 
 @section('content')
 
-            <div class="title m-b-md">
+            <h1 class="header">
                 Company Structure Registry
-            </div>
+            </h1>
 
     @endsection

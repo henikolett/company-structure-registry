@@ -14,4 +14,8 @@ class Element extends Model {
         return $this->belongsToMany('App\Employee');
     }
 
+    public function type(){
+        return $this->belongsTo('App\Type');
+    }
+
 }

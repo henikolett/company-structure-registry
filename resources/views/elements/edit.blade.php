@@ -37,9 +37,15 @@
 
         </select>
 
-        <input type="submit" name="submit" value="Update">
+        <br>
+
+        <button class="btn waves-effect waves-light" type="submit" name="action">Edit
+            <i class="material-icons right">send</i>
+        </button>
 
     </form>
+
+    <br>
 
     <form action="/elements/{{ $element->id }}" method="post">
 
@@ -47,7 +53,7 @@
 
         {{csrf_field()}}
 
-        <input type="submit" name="delete" value="Delete">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Delete</button>
 
     </form>
 

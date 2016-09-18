@@ -2,40 +2,54 @@
 
 @section('content')
 
-    <h1>Create new element</h1>
+    <h1 class="header">Create new element</h1>
 
-    <form action="/elements" method="post">
+        <form action="/elements" method="post">
 
-        <label for="name">Name</label>
-        <input type="text" name="name" placeholder="Enter name">
-        {{csrf_field()}}
+                <div class="input-field">
+                    <input type="text" name="name" placeholder="Enter name">
+                    <label for="name" class="active">Name</label>
+                </div>
+                {{csrf_field()}}
 
-        <label for="parent_id">Parent</label>
-        <select name="parent_id" id="parent_id">
+                <div class="input-field">
 
-            <option value="0">None</option>
+                        <select  name="parent_id" id="parent_id">
 
-            @foreach($elements as $element)
+                            <option value="0">None</option>
 
-                <option value="{{ $element->id }}">{{ $element->name }}</option>
+                            @foreach($elements as $element)
 
-                @endforeach
+                                <option value="{{ $element->id }}">{{ $element->name }}</option>
 
-        </select>
+                            @endforeach
 
-        <label for="type_id">Type</label>
-        <select name="type_id" id="type_id">
+                        </select>
+                        <label for="parent_id" class="active">Parent</label>
 
-            @foreach($types as $type)
 
-                <option value="{{ $type->id }}">{{ $type->name }}</option>
+                </div>
 
-                @endforeach
 
-        </select>
+                <div class="input-field">
+                    <select name="type_id" id="type_id">
 
-        <input type="submit" name="submit" value="Create">
+                        @foreach($types as $type)
 
-    </form>
+                            <option value="{{ $type->id }}">{{ $type->name }}</option>
+
+                        @endforeach
+
+                    </select>
+                    <label for="type_id" class="active">Type</label>
+                </div>
+
+
+                <button class="btn waves-effect waves-light" type="submit" name="action">Create
+                    <i class="material-icons right">send</i>
+                </button>
+
+
+        </form>
 
     @endsection

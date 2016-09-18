@@ -4,17 +4,20 @@
 
     <h1>Details of employee: {{ $employee->name }}</h1>
 
-    <div>{{ $employee->name }}</div>
-
+    <div>Name: {{ $employee->name }}</div>
     <div>
-        Working at:
+        Currently working at:
+
         @foreach($elements as $element)
 
-            {{ $element->name }}
+            {{ $element->name }},
 
         @endforeach
     </div>
+    <div>Total: {{ $num }}</div>
 
-    <div><a href="{{ route('employees.edit', $employee->id) }}">Edit</a></div>
+    <br>
+
+    <div><a class="waves-effect waves-light btn" href="{{ route('employees.edit', $employee->id) }}">Edit</a></div>
 
 @endsection

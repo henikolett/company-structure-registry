@@ -51,7 +51,8 @@ class TypesController extends Controller
     public function show($id)
     {
         $type = Type::findOrFail($id);
-        return view('types.show', compact('type'));
+        $elements = $type->elements;
+        return view('types.show', compact('type', 'elements'));
     }
 
     /**

@@ -61,7 +61,8 @@ class EmployeesController extends Controller
     {
         $employee = Employee::findOrFail($id);
         $elements = $employee->elements;
-        return view('employees.show', compact('employee', 'elements'));
+        $num = count($elements);
+        return view('employees.show', compact('employee', 'elements', 'num'));
     }
 
     /**

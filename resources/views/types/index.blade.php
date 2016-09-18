@@ -4,11 +4,11 @@
 
     <h1>All types</h1>
 
-    <ul>
+    <ul class="collection">
 
         @foreach($types as $type)
 
-            <li><a href="{{ route('types.show', $type->id) }}">{{ $type->name }}</a></li>
+            <li class="collection-item"><a href="{{ route('types.show', $type->id) }}">{{ $type->name }}</a></li>
 
             @endforeach
 

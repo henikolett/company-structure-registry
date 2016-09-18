@@ -5,93 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Company Structure Registry</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css" />
 
-    <!-- Styles -->
-    <style>
-        html, body {
-            background-color: #fff;
-            color: #636b6f;
-            font-family: 'Raleway';
-            font-weight: 100;
-            height: 100vh;
-            margin: 0;
-        }
+    <!-- Materialize CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="/css/materialize.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
 
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
-            text-align: center;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-
-        .links > a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        .m-b-md {
-            margin-bottom: 30px;
-        }
-    </style>
 </head>
 <body>
-
-    <div class="flex-center position-ref full-height">
-        @if (Route::has('login'))
-            <div class="top-right links">
-                <a href="{{ url('/login') }}">Login</a>
-                <a href="{{ url('/register') }}">Register</a>
+    <header>
+        <nav class="light-blue lighten-1" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" class="brand-logo" href="/">#CSR</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="/types">All types</a></li>
+                    <li><a href="/types/create">New type</a></li>
+                    <li><a href="/elements">All elements</a></li>
+                    <li><a href="/elements/create">New element</a></li>
+                    <li><a href="/employees">All employees</a></li>
+                    <li><a href="/employees/create">New employee</a></li>
+                </ul>
+                <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
+                    <li><a href="/types">All types</a></li>
+                    <li><a href="/types/create">New type</a></li>
+                    <li><a href="/elements">All elements</a></li>
+                    <li><a href="/elements/create">New element</a></li>
+                    <li><a href="/employees">All employees</a></li>
+                    <li><a href="/employees/create">New employee</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse">
+                    <i class="material-icons">menu</i>
+                </a>
             </div>
-        @endif
+        </nav>
+    </header>
 
-        <div class="content">
-
-            @yield('content')
-
-            <br>
-
-            <div class="links">
-                <a href="/types">All types</a>
-                <a href="/types/create">New type</a>
-                <a href="/elements">All elements</a>
-                <a href="/elements/create">New element</a>
-                <a href="/employees">All employees</a>
-                <a href="/employees/create">New employee</a>
+    <main>
+        <div class="section">
+            <div class="container">
+                <div class="content">
+                    @yield('content')
+                </div>
             </div>
-
         </div>
+    </main>
 
-    </div>
+    <footer class="page-footer orange">
+        <div class="footer-copyright">
+            <div class="container">
+                Created by Nikolett Hegedüs
+            </div>
+        </div>
+    </footer>
 
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
 </body>
-</html>>
+</html>
