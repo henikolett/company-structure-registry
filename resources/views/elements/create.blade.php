@@ -1,5 +1,12 @@
 @extends('layouts.app')
 
+@section('breadcrumb')
+
+    <a href="/" class="breadcrumb">Home</a>
+    <a href="{{ route('elements.create') }}" class="breadcrumb">Create new element</a>
+
+@endsection
+
 @section('content')
 
     <h1 class="header">Create new element</h1>

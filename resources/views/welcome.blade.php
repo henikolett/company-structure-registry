@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@section('breadcrumb')
+
+	<a href="/" class="breadcrumb">Home</a>
+
+@endsection
+
 @section('content')
 
     <h1 class="header">Company Structure Registry</h1>

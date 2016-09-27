@@ -42,9 +42,14 @@
                 </a>
             </div>
         </nav>
+        <nav>
+            <div class="nav-wrapper container">
+                @yield('breadcrumb')
+            </div>
+        </nav>          
     </header>
 
-    <main>
+    <main>      
         <div class="section">
             <div class="container">
                 <div class="content">

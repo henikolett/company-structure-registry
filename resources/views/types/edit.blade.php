@@ -1,5 +1,13 @@
 @extends('layouts.app')
 
+@section('breadcrumb')
+
+    <a href="/" class="breadcrumb">Home</a>
+    <a href="{{ route('types.index') }}" class="breadcrumb">All types</a>
+    <a href="{{ route('types.edit', $type->id) }}" class="breadcrumb">Edit {{ $type->name }}</a>
+
+@endsection
+
 @section('content')
 
     <h1>Edit type: {{ $type->name }}</h1>

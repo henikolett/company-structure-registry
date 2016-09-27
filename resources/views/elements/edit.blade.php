@@ -1,5 +1,13 @@
 @extends('layouts.app')
 
+@section('breadcrumb')
+
+    <a href="/" class="breadcrumb">Home</a>
+    <a href="{{ route('elements.index') }}" class="breadcrumb">All elements</a>
+    <a href="{{ route('elements.edit', $element->id) }}" class="breadcrumb">Edit {{ $element->name }}</a>
+
+@endsection
+
 @section('content')
 
     <h1>Edit element: {{ $element->name }}</h1>
