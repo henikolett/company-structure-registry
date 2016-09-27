@@ -9,13 +9,20 @@
     <br>
     <div><a class="waves-effect waves-light btn" href="{{ route('elements.edit', $element->id) }}">Edit</a></div>
 
-    <h2>Employees</h2>
-    <ul class="collection">
-        @foreach($employees as $employee)
+    @if(count($employees) > 0)
 
-            <li class="collection-item"><a href="{{route('employees.show', $employee->id)}}">{{ $employee->name }}</a></li>
+        <h2>Employees</h2>
+        <ul class="collection">
+            @foreach($employees as $employee)
 
-            @endforeach
-    </ul>
+                <li class="collection-item"><a href="{{route('employees.show', $employee->id)}}">{{ $employee->name }}</a></li>
+
+                @endforeach
+        </ul>
+
+    @else
+        <br /><div>No employees</div>
+
+    @endif
 
     @endsection
