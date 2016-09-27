@@ -8,16 +8,33 @@
     <br>
     <div><a class="waves-effect waves-light btn" href="{{ route('types.edit', $type->id) }}">Edit</a></div>
 
-    <h2>Elements</h2>
-    <ul class="collection">
+    @if(count($elements) > 0)
 
-        @foreach($elements as $element)
+        <h2>Elements</h2>
 
-            <li class="collection-item"><a href="{{route('elements.show', $element->id)}}"> {{ $element->name }} </a></li>
+        <ul class="collection">
 
-            @endforeach
+            @foreach($elements as $element)
 
-    </ul>
+                <li class="collection-item"><a href="{{route('elements.show', $element->id)}}"> {{ $element->name }} </a></li>
+
+                @endforeach
+
+        </ul>
+
+    @else
+
+        <br /><div>No elements</div>
+
+    @endif
+
+
+
+
+        
+
+
+
 
 
 
